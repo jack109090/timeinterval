@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --container-structure: 20% repeat(5, 1fr) / repeat(6, 1fr);
+    --title-span: 1 / 7;
+    --order-title: 1;
+    --order-interval: 2;
+    --order-header-year: 3;
+    --order-header-month: 4;
+    --order-header-day: 5;
+    --order-header-hour: 6;
+    --order-header-minute: 7;
+    --order-header-second: 8;
+    --order-text-year: 9;
+    --order-text-month: 10;
+    --order-text-day: 11;
+    --order-text-hour: 12;
+    --order-text-minute: 13;
+    --order-text-second: 14;
+    --order-last: 15;
+    --order-content-year: 16;
+    --order-content-month: 17;
+    --order-content-day: 18;
+    --order-content-hour: 19;
+    --order-content-minute: 20;
+    --order-content-second: 21;
+    --title-font-size: 2.5rem;
+    --other-font-size: 2.5rem;
+}
+
+@media (max-width: 850px) {
+    :root {
+    --container-structure: repeat(7 , 1fr) / repeat(3, 1fr);
+    --title-span: 1 / 4;
+    --order-title: 1;
+    --order-interval: 2;
+    --order-last: 3;
+    --order-header-year: 4;
+    --order-header-month: 7;
+    --order-header-day: 10;
+    --order-header-hour: 13;
+    --order-header-minute: 16;
+    --order-header-second: 19;
+    --order-content-year: 5;
+    --order-content-month: 8;
+    --order-content-day: 11;
+    --order-content-hour: 14;
+    --order-content-minute: 17;
+    --order-content-second: 20;
+    --order-text-year: 6;
+    --order-text-month: 9;
+    --order-text-day: 12;
+    --order-text-hour: 15;
+    --order-text-minute:18;
+    --order-text-second: 21;
+    --title-font-size: 2rem;
+    --other-font-size: 2rem;
+    }
+}
+
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to right top, red, #0a46ec);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template: 100% / 100%;
+    color: white;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 4px #d16ba5;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: white;
+    text-shadow: 2px 2px 4px #d16ba5;
+    font-weight: normal;
+    margin: 0;
+}
+
+#container {
+    display: grid;
+    grid-template: var(--container-structure);
+    height: 90%;
+    width: 90%;
+}
+
+#title {
+    grid-column: var(--title-span);
+    order: var(--order-title);
+    display: flex;
+    font-size: var(--title-font-size);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: deepskyblue;
+    margin: 0;
+}
+
+.interval {
+    grid-column: var(--title-span);
+    order: var(--order-interval);
+    display: flex;
+    font-size: var(--title-font-size);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: deepskyblue;
+    margin: 0;
+}
+
+.last {
+    grid-column: var(--title-span);
+    order: var(--order-last);
+    display: flex;
+    font-size: var(--title-font-size);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: deepskyblue;
+    margin: 0;
+}
+
+.section-header {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: var(--other-font-size);
+    background-color: deepPink;
+    border:2px black solid;
+}
+
+.section-text {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: var(--other-font-size);
+    color: white;
+    text-align: center;
+    background-color: deepPink;
+    border:2px black solid;
+}
+
+
+#header-years {
+    display: grid;
+    order: var(--order-header-year);
+}
+
+#header-months {
+    display: grid;
+    order: var(--order-header-month);
+}
+
+#header-days {
+    display: grid;
+    order: var(--order-header-day);
+}
+
+#header-hours {
+    display: grid;
+    order: var(--order-header-hour);
+}
+
+#header-minutes {
+    display: grid;
+    order: var(--order-header-minute);
+}
+
+
+#header-seconds {
+    display: grid;
+    order: var(--order-header-second);
+}
+
+#last-years {
+    display: grid;
+    order: var(--order-text-year);
+}
+
+#last-months {
+    display: grid;
+    order: var(--order-text-month);
+}
+
+#last-days {
+    display: grid;
+    order: var(--order-text-day);
+}
+
+#last-hours {
+    display: grid;
+    order: var(--order-text-hour);
+}
+
+#last-minutes {
+    display: grid;
+    order: var(--order-text-minute);
+}
+
+#last-seconds {
+    display: grid;
+    order: var(--order-text-second);
+}
+
+#text-years {
+    display: grid;
+    order: var(--order-content-year);
+}
+
+#text-months {
+    display: grid;
+    order: var(--order-content-month);
+}
+
+#text-days {
+    display: grid;
+    order: var(--order-content-day);
+}
+
+#text-hours {
+    display: grid;
+    order: var(--order-content-hour);
+}
+
+#text-minutes {
+    display: grid;
+    order: var(--order-content-minute);
+}
+
+#text-seconds {
+    display: grid;
+    order: var(--order-content-second);
+}
